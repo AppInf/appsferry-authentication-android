@@ -1,0 +1,15 @@
+<resources>
+    <string name="user_sdk_error">System error, please try again later</string>
+    <string name="user_server_data_error">Data exception, please try again later</string>
+    <string name="user_invalid_phone_number">Please enter a valid phone number</string>
+    <string name="user_invalid_area_code">Please enter international telephone code</string>
+    <string name="user_invalid_email_code">Please enter verification code</string>
+    <string name="user_not_login">User is not logged in</string>
+    <string name="user_invalid_email_address">Please enter a valid email</string>
+    <string name="user_invalid_uid">Please enter a valid uid</string>
+    <string name="user_empty_password">Please enter password</string>
+    <string name="user_invalid_account_type">Request query cannot be empty</string>
+    <string name="user_not_current_user_error">Please do not update other user‘s information</string>
+    <string name="user_invalid_phone_code">Please enter verification code</string>
+    <string name="user_network_error">Network Error</string>
+</resources>

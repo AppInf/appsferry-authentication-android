@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_sdk_error">系统错误，请稍后重试</string>
+    <string name="user_server_data_error">服务数据异常，请稍后重试</string>
+    <string name="user_invalid_phone_number">请输入手机号码</string>
+    <string name="user_invalid_area_code">请输入国际电话区号</string>
+    <string name="user_invalid_email_code">请输入邮箱验证码</string>
+    <string name="user_not_login">用户未登录</string>
+    <string name="user_invalid_email_address">请输入邮箱地址</string>
+    <string name="user_invalid_uid">请输入用户id</string>
+    <string name="user_empty_password">请输入密码</string>
+    <string name="user_invalid_account_type">请求查询类型不能为空</string>
+    <string name="user_not_current_user_error">请不要更新其他用户信息</string>
+    <string name="user_invalid_phone_code">请输入短信验证码</string>
+    <string name="user_network_error">网络异常</string>
+</resources>

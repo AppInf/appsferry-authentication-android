@@ -1,0 +1,185 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.protobuf'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.appsferry.app'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.inke.inf.kae"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                facebook_app_id: 'fb1077885156362136',
+        ]
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+
+//    signingConfigs {
+//        def keyProperties = new Properties()
+//        def keyStorePropertiesFile = project.file("keystore/keystore.properties")
+//        keyProperties.load(new FileInputStream(keyStorePropertiesFile))
+//
+//        demo {
+//            storeFile  project.file(keyProperties["storeFile"])
+//            keyAlias keyProperties["keyAlias"]
+//            storePassword keyProperties["storePassword"]
+//            keyPassword keyProperties["keyPassword"]
+//        }
+//    }
+
+//    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.demo
+//        }
+//        debug {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.demo
+//        }
+//    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    viewBinding {
+        enabled = true
+    }
+
+    buildFeatures {
+        compose true
+        viewBinding true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.0"
+    }
+
+    signingConfigs {
+        def Properties keyProperties = new Properties()
+        keyProperties.load(new FileInputStream(file("${project.projectDir}/keystore/keystore.properties")))
+        defaultConfig {
+            print("debugStoreFile = ${file(keyProperties["storeFile"])}")
+            storeFile file(keyProperties["storeFile"])
+            keyAlias keyProperties["keyAlias"]
+            storePassword keyProperties["storePassword"]
+            keyPassword keyProperties["keyPassword"]
+            v2SigningEnabled true
+        }
+
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            jniDebuggable false
+            renderscriptDebuggable false
+            renderscriptOptimLevel 3
+            minifyEnabled false
+            zipAlignEnabled true
+            signingConfig signingConfigs.defaultConfig
+        }
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.defaultConfig
+        }
+    }
+}
+
+
+def ktx_deps = [
+        "androidx.core:core-ktx:1.10.1"
+]
+
+def nav_version = "2.5.3"
+def navigation_deps = [
+        // Java language implementation
+        "androidx.navigation:navigation-fragment:$nav_version",
+        "androidx.navigation:navigation-ui:$nav_version",
+        // Kotlin
+        "androidx.navigation:navigation-fragment-ktx:$nav_version",
+        "androidx.navigation:navigation-ui-ktx:$nav_version",
+        // Feature module Support
+        "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
+]
+
+dependencies {
+    implementation project(':appsferry-login')
+    implementation project(":appsferry-login-google")
+    implementation project(":appsferry-login-facebook")
+    implementation project(":appsferry-login-snapchat")
+    implementation project(":appsferry-login-tiktok")
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
+    implementation "androidx.compose.ui:ui:$compose_ui_version"
+    implementation 'androidx.compose.material:material:1.2.0'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation platform('androidx.compose:compose-bom:2022.10.00')
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
+
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+    implementation("androidx.datastore:datastore-preferences-core:1.0.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
+
+    implementation 'com.google.protobuf:protobuf-javalite:3.10.0'
+    (ktx_deps + navigation_deps).each {
+        implementation it
+    }
+    // compose
+    def composeBom = platform('androidx.compose:compose-bom:2023.01.00')
+    implementation composeBom
+    implementation 'androidx.compose.material3:material3'
+    implementation 'androidx.compose.ui:ui-tooling-preview'
+    debugImplementation 'androidx.compose.ui:ui-tooling'
+    implementation 'androidx.compose.material:material-icons-extended'
+    implementation 'androidx.compose.material3:material3-window-size-class'
+    implementation 'androidx.activity:activity-compose'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose'
+    implementation 'androidx.compose.runtime:runtime-livedata'
+    debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
+    implementation "androidx.constraintlayout:constraintlayout-compose:1.0.1"
+    implementation "androidx.navigation:navigation-compose:2.5.3"
+
+
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+}
+
+
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.10.0"
+    }
+
+    generateProtoTasks {
+        all().each { task ->
+            task.builtins {
+                java {
+                    option 'lite'
+                }
+            }
+        }
+    }
+}

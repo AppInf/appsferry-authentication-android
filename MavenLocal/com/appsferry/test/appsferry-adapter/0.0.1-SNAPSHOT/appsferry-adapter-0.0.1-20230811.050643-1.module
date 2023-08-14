@@ -1,0 +1,104 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.appsferry.test",
+    "module": "appsferry-adapter",
+    "version": "0.0.1-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.3.3"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.8.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "appsferry-adapter-0.0.1-SNAPSHOT.aar",
+          "url": "appsferry-adapter-0.0.1-SNAPSHOT.aar",
+          "size": 3960,
+          "sha512": "810881b9fb71d4efe34cacc557cb0b93311a9182f5269a70f9f7a47ce66ba90caaed67e3281a66b298bf50b2762e5b470883d6ba87b531351013c4cf8b5b579d",
+          "sha256": "9c45b2d9f8053fa82153f2fcee7123a6714590dd28af182c5fcbc0a07f90029e",
+          "sha1": "594c304618a02099ee79b9c37755eb6f132ddbd4",
+          "md5": "1260d93d6b1a82d38dca9317c35fb252"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.appsferry.test",
+          "module": "appsferry-core",
+          "version": {
+            "requires": "0.0.1-SNAPSHOT"
+          }
+        },
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.4.1"
+          }
+        },
+        {
+          "group": "com.google.android.material",
+          "module": "material",
+          "version": {
+            "requires": "1.5.0"
+          }
+        },
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.8.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "appsferry-adapter-0.0.1-SNAPSHOT.aar",
+          "url": "appsferry-adapter-0.0.1-SNAPSHOT.aar",
+          "size": 3960,
+          "sha512": "810881b9fb71d4efe34cacc557cb0b93311a9182f5269a70f9f7a47ce66ba90caaed67e3281a66b298bf50b2762e5b470883d6ba87b531351013c4cf8b5b579d",
+          "sha256": "9c45b2d9f8053fa82153f2fcee7123a6714590dd28af182c5fcbc0a07f90029e",
+          "sha1": "594c304618a02099ee79b9c37755eb6f132ddbd4",
+          "md5": "1260d93d6b1a82d38dca9317c35fb252"
+        }
+      ]
+    }
+  ]
+}

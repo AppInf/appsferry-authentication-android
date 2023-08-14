@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/loginWithTiktok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tiktok Login"/>
+
+    <Button
+        android:id="@+id/bindWithTiktok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tiktok Bind"/>
+
+    <Button
+        android:id="@+id/unbindWithTiktok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tiktok Unbind"/>
+
+</LinearLayout>

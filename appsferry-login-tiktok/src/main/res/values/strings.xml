@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_tt_auth_failed">TikTok authentication failed</string>
+    <string name="user_tt_generics_error">No generic object is set</string>
+
+</resources>

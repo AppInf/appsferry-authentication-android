@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_sc_auth_failed">Snapchat 授权失败</string>
+    <string name="user_sc_get_data_failed">获取Snapchat数据失败</string>
+    <string name="user_sc_generics_error">没有设置泛型对象</string>
+</resources>

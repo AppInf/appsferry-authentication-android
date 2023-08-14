@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_go_signin_failed">Failed to sign in with your Google account</string>
+    <string name="user_go_signin_cancel">Google authentication cancelled</string>
+    <string name="user_go_network_error">Network error, please try again later</string>
+    <string name="user_go_singin_error">Please sign in with your Google account</string>
+    <string name="user_go_signout_failed">Failed to sign out with your Google account</string>
+    <string name="user_go_disconnection_failed">Failed to disconnect</string>
+    <string name="user_go_request_scope_error">Failed to request scopes</string>
+    <string name="user_go_get_token_error">Failed to get token</string>
+    <string name="user_go_clear_token_error">Failed to clear token</string>
+    <string name="user_go_generics_error">No generic object is set</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_go_signin_failed">Google 授權登錄失敗</string>
+    <string name="user_go_signin_cancel">已取消 Google 授權</string>
+    <string name="user_go_network_error">網絡錯誤，請稍後重試</string>
+    <string name="user_go_singin_error">登錄失敗，請稍後重試</string>
+    <string name="user_go_signout_failed">登出失敗</string>
+    <string name="user_go_disconnection_failed">斷開連接失敗</string>
+    <string name="user_go_request_scope_error">請求授權範圍失敗</string>
+    <string name="user_go_get_token_error">獲取 Token 失敗</string>
+    <string name="user_go_clear_token_error">清理Token 失敗</string>
+    <string name="user_go_generics_error">沒有設置泛型對象</string>
+</resources>

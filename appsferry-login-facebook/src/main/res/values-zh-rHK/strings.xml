@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_fb_auth_failed">Facebook 授權失敗</string>
+    <string name="user_fb_auth_cancel">已取消 Facebook 授權</string>
+    <string name="user_fb_generics_error">沒有設置泛型對象</string>
+</resources>

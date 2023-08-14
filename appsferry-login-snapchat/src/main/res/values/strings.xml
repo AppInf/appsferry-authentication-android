@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_sc_auth_failed">snapchat auth failed</string>
+    <string name="user_sc_get_data_failed">Getting snapchat data failed</string>
+    <string name="user_sc_generics_error">No generic object is set</string>
+</resources>

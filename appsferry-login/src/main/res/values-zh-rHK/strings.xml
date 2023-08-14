@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_sdk_error">系統錯誤，請稍後重試</string>
+    <string name="user_server_data_error">服務數據異常，請稍後重試</string>
+    <string name="user_invalid_phone_number">請輸入手機號碼</string>
+    <string name="user_invalid_area_code">請輸入國際電話區號</string>
+    <string name="user_invalid_email_code">請輸入郵箱驗證碼</string>
+    <string name="user_not_login">用戶未登錄</string>
+    <string name="user_invalid_email_address">請輸入郵箱地址</string>
+    <string name="user_invalid_uid">請輸入用戶id</string>
+    <string name="user_empty_password">請輸入密碼</string>
+    <string name="user_invalid_account_type">請求查詢類型不能為空</string>
+    <string name="user_not_current_user_error">請不要更新其他用戶信息</string>
+    <string name="user_invalid_phone_code">請輸入短信驗證碼</string>
+    <string name="user_network_error">網絡異常</string>
+</resources>

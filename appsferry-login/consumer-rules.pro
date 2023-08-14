@@ -1,0 +1,2 @@
+-keepclasseswithmembers class com.appsferry.login.entity.** { *; }
+-keep public class * extends com.appsferry.login.entity.** { *; }

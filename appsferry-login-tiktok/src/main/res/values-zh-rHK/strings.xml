@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_tt_auth_failed">TikTok 授權失敗</string>
+    <string name="user_tt_generics_error">沒有設置泛型對象</string>
+
+</resources>

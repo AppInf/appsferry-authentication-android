@@ -1,0 +1,19 @@
+apply plugin: "maven-publish"
+
+project.afterEvaluate {
+    publishing {
+        publications {
+            defaultPublication(MavenPublication) {
+                groupId "com.appsferry.test"
+                artifactId project.name
+                version "0.0.1-SNAPSHOT"
+                from components.release
+            }
+        }
+        repositories {
+            maven {
+                url project.rootProject.file("MavenLocal").toURI()
+            }
+        }
+    }
+}

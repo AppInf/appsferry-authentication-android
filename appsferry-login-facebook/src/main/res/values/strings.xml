@@ -1,0 +1,5 @@
+<resources>
+    <string name="user_fb_auth_failed">Facebook authentication failed</string>
+    <string name="user_fb_auth_cancel">Facebook authentication cancelled</string>
+    <string name="user_fb_generics_error">No generic object is set</string>
+</resources>
